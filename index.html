@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho do site | Aqui vai o menu e os botões com as redes sociais  -->
+    <header class="header-container">
+
+        <div class="header">
+
+            <div class="checkbox-container">
+
+                <div class="checkbox-wrapper">
+
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+
+                    <div class="menu"></div>
+                    <nav class="menu-itens">
+                        <ul>
+                            <li>
+                                <a href="#">Início</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Projetos</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+        <h1>Alessandro Santos Dias</h1>
+        <h2>Desenvolvedor Full-Stack</h2>
+
+        <div class="social-media">
+            <a target="_blank" href="https://www.linkedin.com/in/alessandrosdias/">Linkedin</a>
+            <a target="_blank" href="https://github.com/alessandrosdias">Github</a>
+        </div>
+
+        <div class="sobremim">
+            <h3>
+                Apaixonado por musculação e fascinado pela tecnologia, quando era criança tive muito contato com
+                computadores, jogando jogos online de rpg, moba, fps e etc... Ou então instalando sistemas operacionais,
+                instalando impressoras e as vezes fazendo a manutenção e conserto de computadores. Desde então venho me
+                esforçando para aprender tudo sobre esse mundo digital e conseguir a tão sonhada vaga na área de
+                programação.
+            </h3>
+        </div>
+
+    </header> <!--Fim do Cabeçalho-->
+    <!-- Aqui vai os Cards de Projetos -->
+    <main class="container">
+
+        <div class="card-container">
+
+            <div class="card">
+                <div>
+                    <div class="card-wrapper">
+                        <h2>Projeto 1</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-text">
+                <h2>Em breve!</h2>
+            </div>
+
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div>
+                    <div class="card-wrapper">
+                        <h2>Projeto 2</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-text">
+                <h2>Em breve!</h2>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div>
+                    <div class="card-wrapper">
+                        <h2>Projeto 3</h2>
+                        <p>Vem ver!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-text">
+                <h2>Em breve!</h2>
+            </div>
+        </div>
+
+    </main> <!--Fim dos Cards-->
+
+    <br><br>
+
+    <h1 style="color: black; text-align: center;">Formulário de Contato</h1>
+    <form action="pagina de ação" method="post" name="dados" onSubmit="return enviardados();">
+        <table width="588" border="0" align="center">
+            <tr>
+                <td width="118">
+                    <font size="2" face="Verdana,
+            Arial, Helvetica, sans-serif" style="color: black;">Nome completo:</font>
+                </td>
+                <td width="460">
+                    <input name="tx_nome" type="text" class="formbutton" id="tx_nome" size="52" maxlength="150">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font size="2" face="Verdana, Arial, Helvetica,
+            sans-serif" style="color: black;">E-mail:</font>
+                </td>
+                <td>
+                    <font size="2">
+                        <input name="tx_email" type="text" id="tx_email" size="52" maxlength="150" class="formbutton">
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <font face="Verdana, Arial, Helvetica,
+            sans-serif">
+                        <font size="2" style="color: black;">Mensagem<strong>:
+                            </strong></font>
+                    </font>
+                </td>
+                <td rowspan="2">
+                    <font size="2">
+                        <textarea name="tx_mensagem" cols="50" rows="8" class="formbutton" id="tx_mensagem"
+                            input></textarea>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td height="85">
+                    <p><strong>
+                            <font face="Verdana,
+            Arial, Helvetica, sans-serif">
+                                <font size="1">
+                                </font>
+                            </font>
+                        </strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td height="22"></td>
+                <td>
+                    <input name="Submit" type="submit" class="formobjects" value="Enviar">
+
+                    <input name="Reset" type="reset" class="formobjects" value="Redefinir">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+    </form>
+    <script language="JavaScript">
+        function enviardados() {
+
+            if (document.dados.tx_nome.value == "" ||
+                document.dados.tx_nome.value.length < 8) {
+                alert("Preencha campo NOME corretamente!");
+                document.dados.tx_nome.focus();
+                return false;
+            }
+
+
+            if (document.dados.tx_email.value == "" ||
+                document.dados.tx_email.value.indexOf('@') == -1 ||
+                document.dados.tx_email.value.indexOf('.') == -1) {
+                alert("Preencha campo E-MAIL corretamente!");
+                document.dados.tx_email.focus();
+                return false;
+            }
+
+            if (document.dados.tx_mensagem.value == "") {
+                alert("Preencha o campo MENSAGEM!");
+                document.dados.tx_mensagem.focus();
+                return false;
+            }
+
+            if (document.dados.tx_mensagem.value.length < 50) {
+                alert("É necessario preencher o campo MENSAGEM com mais de 50 caracteres!");
+                document.dados.tx_mensagem.focus();
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+
+    <!-- Aqui vai o Rodapé -->
+    <footer class="footer">
+        Feito por Alessandro Santos Dias
+    </footer> <!--Fim do Rodapé-->
+
+</body>
+
+</html>
